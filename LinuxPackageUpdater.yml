@@ -1,7 +1,9 @@
 ---
 - hosts: all
 
-  become: yes
+  become: true
+  become_method: sudo
+  become_user: root
 
   tasks:
     - name: APT Package Updater
