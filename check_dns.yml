@@ -1,12 +1,12 @@
 ---
 - hosts: all
 
-#  become: true
+  become: true
 
   tasks:
   
     - name: "Read a file content"
-      shell: |
+      shell:
         cat /etc/resolv.conf
       register: file_content
 
