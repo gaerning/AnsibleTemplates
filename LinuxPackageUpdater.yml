@@ -8,12 +8,3 @@
       apt:
         upgrade: yes
         update_cache: yes
-    - name: Send mail alert if updated
-          community.general.mail:
-            to:
-            - 'erik.oestby@gmail.com'
-            subject: Update Alert
-            body: 'Ansible Tower Updates have been applied on the following system: {{ ansible_hostname }}'
-            sender: "teknisk@samband.no"
-          delegate_to: localhost
-          when: apt_update.changed
