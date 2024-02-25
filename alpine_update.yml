@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.33.159
+- hosts: alpine
 
   become: true
 
